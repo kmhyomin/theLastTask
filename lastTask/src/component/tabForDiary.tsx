@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import '../css/tabForDiary.css';
 function Tab(){
     return (
         <div className="tabBar">

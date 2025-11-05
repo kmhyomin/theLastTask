@@ -112,4 +112,8 @@ CSS 변수 (globals.css)
 `--destructive`: #D4183D
 `--muted`: #ECECF0
 `--muted-foreground`: #717182
-검은색 버튼 컬러 : #030213
+
+
+검은색 버튼 색깔 : #030213
+
+tab버튼 배경 색깔: #ececf0
