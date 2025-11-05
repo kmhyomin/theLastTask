@@ -1,0 +1,115 @@
+🎨 메인 컬러 시스템
+
+포인트 컬러 (보라색 - Purple)
+`purple-50`: #FAF5FF
+`purple-100`: #F3E8FF
+`purple-200`: #E9D5FF
+`purple-300`: #D8B4FE
+`purple-400`: #C084FC
+`purple-500`: #A855F7
+`purple-600`: #9333EA
+`purple-700`: #7E22CE
+`purple-800`: #6B21A8
+`purple-900`: #581C87
+
+보조 컬러 1 (핑크 - Pink)
+`pink-50`: #FDF2F8
+`pink-100`: #FCE7F3
+`pink-200`: #FBCFE8
+`pink-400`: #F472B6
+`pink-500`: #EC4899
+`pink-600`: #DB2777
+
+보조 컬러 2 (블루 - Blue)
+`blue-50`: #EFF6FF
+`blue-100`: #DBEAFE
+`blue-200`: #BFDBFE
+`blue-500`: #3B82F6
+`blue-600`: #2563EB
+`blue-800`: #1E40AF
+
+---
+
+😊 감정별 컬러
+
+행복 (Happy - Yellow)
+`yellow-100`: #FEF3C7
+`yellow-200`: #FDE68A
+`yellow-600`: #D97706
+차트 색상: #EAB308
+
+사랑 (Love - Pink)
+`pink-100`: #FCE7F3
+`pink-200`: #FBCFE8
+`pink-600`: #DB2777
+차트 색상: #EC4899
+
+신남 (Excited - Purple)
+`purple-100`: #F3E8FF
+`purple-200`: #E9D5FF
+`purple-600`: #9333EA
+차트 색상: #A855F7
+
+평범 (Normal - Gray)
+`gray-100`: #F3F4F6
+`gray-200`: #E5E7EB
+`gray-400`: #9CA3AF
+`gray-500`: #6B7280
+`gray-600`: #4B5563
+`gray-700`: #374151
+차트 색상: #6B7280
+
+슬픔 (Sad - Blue)
+`blue-100`: #DBEAFE
+`blue-200`: #BFDBFE
+`blue-600`: #2563EB
+차트 색상: #3B82F6
+
+화남 (Angry - Red)
+`red-50`: #FEF2F2
+`red-100`: #FEE2E2
+`red-200`: #FECACA
+`red-600`: #DC2626
+차트 색상: #EF4444
+
+---
+
+🌈 그라데이션 조합
+
+메인 배경
+`from-purple-50` → `via-pink-50` → `to-blue-50`
+(#FAF5FF → #FDF2F8 → #EFF6FF)
+
+아바타/프로필 그라데이션
+`from-purple-500 to-pink-500` (#A855F7 → #EC4899)
+`from-purple-400 to-pink-400` (#C084FC → #F472B6)
+`from-blue-500 to-cyan-500` (#3B82F6 → #06B6D4)
+`from-indigo-500 to-purple-500` (#6366F1 → #A855F7)
+`from-pink-500 to-rose-500` (#EC4899 → #F43F5E)
+`from-green-500 to-emerald-500` (#22C55E → #10B981)
+`from-orange-500 to-red-500` (#F97316 → #EF4444)
+`from-yellow-500 to-orange-500` (#EAB308 → #F97316)
+`from-teal-500 to-blue-500` (#14B8A6 → #3B82F6)
+
+---
+
+🔧 기타 시스템 컬러
+
+Orange
+`orange-50`: #FFF7ED
+`orange-500`: #F97316
+`orange-600`: #EA580C
+
+추가 컬러
+`cyan-500`: #06B6D4
+`emerald-500`: #10B981
+`green-500`: #22C55E
+`indigo-500`: #6366F1
+`rose-500`: #F43F5E
+`teal-500`: #14B8A6
+
+CSS 변수 (globals.css)
+`--destructive`: #D4183D
+`--muted`: #ECECF0
+`--muted-foreground`: #717182
+검은색 버튼 컬러 : #030213
