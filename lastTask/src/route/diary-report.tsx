@@ -1,18 +1,18 @@
-import { Link } from "react-router-dom";
+import Tab from "../component/tab";
 
-function DiaryReport(){
-    return(
-        <>
-        <div className="tabBar">
-            <h4> <Link to="/diary">일기목록</Link></h4>
-            <h4> <Link to="/diary-report">감정 통계</Link></h4>
-        </div>
+function DiaryReport() {
+  return (
+    <>
+      <Tab
+        pageLink1="/diary"
+        pageLink2="/diary-report"
+        pageName1="일기목록"
+        pageName2="감정통계"
+      />
 
-        <h1>DIARY REPORT</h1>
-        </>
-        
-
-    );
+      <h1>DIARY REPORT</h1>
+    </>
+  );
 }
 
 export default DiaryReport;

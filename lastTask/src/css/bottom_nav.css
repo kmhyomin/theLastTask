@@ -1,0 +1,18 @@
+.bottomNav{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border: 1px solid; /* 안보여서 임시로 */
+    justify-content: center;
+    align-items: center;
+}
+.bottomNav > div{
+    text-align: center;
+}
+.bottomNav > div:hover{
+    cursor: pointer;
+}
+
+/* git commit -m"add : props from tab.tsx | fix :  botton_nav.css -> bottom_nav.css" */
