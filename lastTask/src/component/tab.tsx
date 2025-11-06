@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 import '../css/tab.css';
 
 type tabProps ={
-    pageLink1 : string;
-    pageLink2 : string;
-    pageName1 : string;
-    pageName2 : string;
+    pageLink_F : string;
+    pageLink_S : string;
+    pageName_f : string;
+    pageName_s : string;
 }
 // Link에도 props 넣을 수 있다길래 props 로 바꾸니 범용성이 더 높아졌다.
-function Tab( {pageLink1, pageLink2, pageName1, pageName2 } : tabProps){
+function Tab( {pageLink_F, pageLink_S, pageName_f, pageName_s } : tabProps){
     return (
         <div className="tabBar">
-            <h4> <Link to={pageLink1}>{pageName1}</Link></h4>
-            <h4> <Link to={pageLink2}>{pageName2}</Link></h4>
+            <h4> <Link to={pageLink_F}>{pageName_f}</Link></h4>
+            <h4> <Link to={pageLink_S}>{pageName_s}</Link></h4>
         </div>
     );
 }

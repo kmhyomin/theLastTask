@@ -1,6 +1,6 @@
 import './css/App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Bottomnav from "./route/bottom_nav";
+import Bottomnav from "./component/bottom_nav";
 import Diary from "./route/diary";
 import Community from "./route/community";
 import MyPage from "./route/my_page";

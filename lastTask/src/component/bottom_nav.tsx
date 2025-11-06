@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import '../css/botton_nav.css';
+import '../css/bottom_nav.css';
 function Bottomnav(){
     return(
         <div className="bottomNav">
