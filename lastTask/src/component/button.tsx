@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/button.css';
+// import '../css/button.css';
 // 얘 css 여기서 안 받았는데 어디서 받았지??
 // diray.css에서 D_writingBtn로 받았뜸
 // 아마도 버튼 색이나 길이는 다른데 한 컴포넌트로 같이 써야하니 그냥 페이지에서 className 주고 따로 작업 한듯

@@ -1,4 +1,3 @@
-import './css/App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Bottomnav from "./component/bottom_nav";
 import Diary from "./route/diary";

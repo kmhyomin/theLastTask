@@ -1,19 +1,29 @@
 import { Link } from "react-router-dom";
-import '../css/tab.css';
+import { TabBar } from "./global_style";
+import { useState } from "react";
 
 type tabProps ={
-    pageLink_F : string;
-    pageLink_S : string;
-    pageName_f : string;
-    pageName_s : string;
+    pageLink_First : string;
+    pageLink_Second : string;
+    pageName_First : string;
+    pageName_Second : string;
 }
+
+// {clicked}:{ clicked : boolean} 
+
 // Link에도 props 넣을 수 있다길래 props 로 바꾸니 범용성이 더 높아졌다.
-function Tab( {pageLink_F, pageLink_S, pageName_f, pageName_s } : tabProps){
-    return (
-        <div className="tabBar">
-            <h4> <Link to={pageLink_F}>{pageName_f}</Link></h4>
-            <h4> <Link to={pageLink_S}>{pageName_s}</Link></h4>
-        </div>
+function Tab({ clicked,pageLink_First, pageLink_Second, pageName_First, pageName_Second} : { clicked : boolean} & tabProps){
+    const [itsClicked, setItsClicked] = useState(false);
+    
+    const handleClick = () => {
+        setItsClicked(!itsClicked);
+    }
+
+    return ( 
+        <TabBar onClick={handleClick} clicked={itsClicked}>
+            <h4> <Link to={pageLink_First}>{pageName_First}</Link></h4>
+            <h4> <Link to={pageLink_Second}>{pageName_Second}</Link></h4>
+        </TabBar>
     );
 }
 
