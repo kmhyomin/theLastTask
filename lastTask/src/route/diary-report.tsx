@@ -4,7 +4,7 @@ function DiaryReport() {
   return (
     <>
       <Tab
-        pageLink_First="/diary"
+        pageLink_First="/"
         pageLink_Second="/diary-report"
         pageName_First="일기목록"
         pageName_Second="감정통계"

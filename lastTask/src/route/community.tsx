@@ -1,12 +1,20 @@
 import Btn from "../component/button";
-import { CircleBtn } from "../component/global_style";
+import { CircleBtn, CommentsTopArea } from "../component/global_style";
+import Post from "../component/post";
+import { SlMagnifier } from "react-icons/sl";
+import { LuNotebookPen } from "react-icons/lu";
 
 function Community() {
   return (
     <>
-      <h1> COMMUNITY</h1>
+      <CommentsTopArea>
+        <h4>커뮤니티</h4>
+        <h4> <SlMagnifier /> </h4>
+      </CommentsTopArea>
+      
+      <Post />
       <CircleBtn>
-        <Btn icon="(글쓰기....아이콘)" text="" />
+        <Btn icon = {<LuNotebookPen />} text="" />
       </CircleBtn>
     </>
   );

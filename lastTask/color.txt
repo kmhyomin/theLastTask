@@ -2,7 +2,9 @@
 
 포인트 컬러 (보라색 - Purple)
 `purple-50`: #FAF5FF
+뒷배경 색{
 `purple-100`: #F3E8FF
+}
 `purple-200`: #E9D5FF
 `purple-300`: #D8B4FE
 `purple-400`: #C084FC

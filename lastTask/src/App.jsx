@@ -4,18 +4,23 @@ import Diary from "./route/diary";
 import Community from "./route/community";
 import MyPage from "./route/my_page";
 import DiaryReport from "./route/diary-report";
+import { Wrapper } from "./component/global_style";
+import PostDetail from "./route/post_Detail";
 
 function App() {
   return (
+    <Wrapper>
       <BrowserRouter>
         <Routes>
-          <Route path="/diary" element={<Diary />} />
+          <Route path="/" element={<Diary />} />
           <Route path="/diary-report" element={<DiaryReport />}></Route>
           <Route path="/community" element={<Community />} />
           <Route path="/my_page" element={<MyPage />} />
+          <Route path="/post-Detail" element={<PostDetail />} />
         </Routes>
         <Bottomnav />
       </BrowserRouter>
+    </Wrapper>
   );
 }
 
