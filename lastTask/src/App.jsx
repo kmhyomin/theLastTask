@@ -1,15 +1,26 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Bottomnav from "./component/bottom_nav";
-import Diary from "./route/diary";
+import Diary from "./pages/Diary.tsx";
 import Community from "./route/community";
 import MyPage from "./route/my_page";
 import DiaryReport from "./route/diary-report";
 import { Wrapper } from "./component/global_style";
 import PostDetail from "./route/post_Detail";
+import { BottomNavModule } from "./components/mocules/BottomNav.tsx";
+import { NAV_ITEMS } from "./data/navItem.tsx";
+import styled from "styled-components";
 
+const Container = styled.div`
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    background: linear-gradient(135deg, #faf5ff 0%, #fdf2f8 50%, #eff6ff 100%);
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+`;
 function App() {
   return (
-    <Wrapper>
+    <Container>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Diary />} />
@@ -18,9 +29,9 @@ function App() {
           <Route path="/my_page" element={<MyPage />} />
           <Route path="/post-Detail" element={<PostDetail />} />
         </Routes>
-        <Bottomnav />
+        <BottomNavModule items={NAV_ITEMS} />
       </BrowserRouter>
-    </Wrapper>
+    </Container>
   );
 }
 

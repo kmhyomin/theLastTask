@@ -13,6 +13,9 @@ function Community() {
       </CommentsTopArea>
       
       <Post />
+      <Post />
+      <Post />
+      
       <CircleBtn>
         <Btn icon = {<LuNotebookPen />} text="" />
       </CircleBtn>

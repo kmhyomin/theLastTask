@@ -16,15 +16,23 @@ import {
   CommentsSubmitBtn,
   CommentCard,
   DefaultBtn,
+  Like,
+  CountComtents,
+  LikeBox,
+  TopBox,
 } from "../component/global_style";
 import Comments from "../component/comments";
 import { FaArrowLeft } from "react-icons/fa";
+import { FaCommentDots } from "react-icons/fa";
 
 function PostDetail() {
   return (
     <>
       <PostDetailTopBox>
-        <Link to="/community"><FaArrowLeft /> </Link>
+        <Link to="/community">
+          <FaArrowLeft />{" "}
+        </Link>
+        {/* 링크 잘 닫았는데 왜 포인터가 뜨징 */}
         <div>게시물</div>
       </PostDetailTopBox>
 
@@ -39,13 +47,17 @@ function PostDetail() {
               </Box>
             </CardState>
             <Title>오늘 정말 행복한 하루였어요🌟</Title>
-            {/* 여기에 location으로 삼항 연산자 쓰기 */}
+            {/* 여기에 location으로 삼항 연산자 쓸 수 있을 듯 */}
           </PostBoxTop>
 
           <PostTextArea>
             Lorem ipsum dolor sit amet clor possimus neque saepe nam et
             perferendis qui nisi error illo, odio libero.
           </PostTextArea>
+          <TopBox>
+            <CountComtents> <FaCommentDots /> 4</CountComtents>
+            <LikeBox>❤️ 3</LikeBox>
+          </TopBox>
         </CardWrapper>
       </PostDetailTextBox>
 

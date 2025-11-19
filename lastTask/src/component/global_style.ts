@@ -5,12 +5,11 @@ import { FaPen } from "react-icons/fa";
 
 export const Wrapper = styled.div`
   width: 100vw;
-  max-width: 460px;
-  height: cacl(100vh - 80px);
+  height : 100vh;
+  background: linear-gradient(135deg, #FAF5FF 0%, #FDF2F8 50%, #EFF6FF 100%);
   padding: 10px;
   text-align: center;
   margin: auto;
-  background: #f3e8ff;
   overflow: hidden;
   position: relative;
   cursor:pointer;
@@ -133,6 +132,7 @@ export const CardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
+  margin-top: 10px;
   padding: 20px;
 `;
 export const TopBox = styled.div`
@@ -247,6 +247,8 @@ export const PostBoxBottom = styled.div`
   gap: 10px;
 `;
 export const Like = styled.div``;
+export const LikeBox = styled.div``;
+export const CountComtents = styled.div``;
 export const Hits = styled.div``;
 
 // ================================
@@ -310,7 +312,7 @@ export const Comment = styled.div`
   background-color: #fff;
   border-radius: 15px;
   margin: 15px;
-  padding: 10px;
+  padding: 10px
 
 `;
 export const InfoOfCommtent = styled.div`

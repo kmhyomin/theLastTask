@@ -28,7 +28,6 @@ function Post() {
           </CardState>
           <Title>오늘 정말 행복한 하루였어요🌟</Title>
         </PostBoxTop>
-
         <PostTextArea>
           Lorem ipsum dolor sit amet clor possimus neque saepe nam et
           perferendis qui nisi error illo, odio libero.
