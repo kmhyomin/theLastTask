@@ -1,7 +1,13 @@
 {
   "include": [
-    "src/**/*.ts", 
+    "src/**/*.ts",
+    "src/**/*.tsx", //자꾸 ts tsx간에 import 안되길래 넣음
     // 🚨 필수: SVG 타입 선언 파일 추가 (이전에 만들었다고 가정한 파일)
-    "custom.d.ts" 
+    "custom.d.ts"
   ],
+  "compilerOptions": {
+    "esModuleInterop": true, //이게 없으면 import React from "react"를 import * as React from "react"로 써야함
+    "allowSyntheticDefaultImports": true, //타입스크립트가 기본 import를 허용하도록 도움을 줌
+     "jsx": "react-jsx", //TypeScript 컴파일러가 tsx 파일에서 JSX 구문을 해석하려면 tsconfig.json에서 jsx 옵션이 반드시 설정 되어 있어야한다고 해서 추가함.
+  }
 }
