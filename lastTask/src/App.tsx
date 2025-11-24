@@ -1,13 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Diary } from './pages/Diary.tsx';
+// import { Diary } from './pages/Diary.js';
 import Community from "./route/community";
 import MyPage from "./route/my_page";
 import DiaryReport from "./route/diary-report";
 import PostDetail from "./route/post_Detail";
-import { BottomNavModule } from "./components/mocules/BottomNav.tsx";
-import { NAV_ITEMS } from "./data/navItem.tsx";
+import { BottomNavModule } from "./components/mocules/BottomNav";
+import { NAV_ITEMS } from "./data/navItem";
 import styled from "styled-components";
-import DiaruLayOut from "./components/organism/DiaryLayout.tsx";
+import DiaryLayout from "./components/organism/DiaryLayout";
+import { DiaryList } from "./pages/DiaryList";
 
 const Container = styled.div`
     width: calc(100vw - 40px);
@@ -23,11 +24,12 @@ function App() {
     <Container>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DiaruLayOut />}>
-            <Route index element={<Diary />} />
-            <Route path="/diary-report" element={<DiaryReport />}></Route>
+          <Route path="/" element={<DiaryLayout />}>
+            <Route index element={<DiaryList />} />
+            <Route path="diary-report" element={<DiaryReport />} />
           </Route>
           {/* TabBar 때문에 하나로 묶어뒀다 */}
+
           <Route path="/community" element={<Community />} />
           <Route path="/my_page" element={<MyPage />} />
           <Route path="/post-Detail" element={<PostDetail />} />

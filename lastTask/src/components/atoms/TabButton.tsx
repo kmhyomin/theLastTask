@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 // 1. 타입을 정의
 interface TabBtnProps {

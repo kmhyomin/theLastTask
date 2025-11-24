@@ -10,7 +10,7 @@ interface TabItem {
 }
 
 interface TabBarProps {
-  tabs: TabItem[]; // 탭 버튼에 데이터 연결함
+  tabs: TabItem[]; // 탭 버튼에 페이지 정보 데이터 연결
 }
 
 const TabBarContainer = styled.nav`
@@ -27,7 +27,7 @@ const TabBarContainer = styled.nav`
 
 export const TabBar = ({ tabs }: TabBarProps) => {
   return (
-    <TabBarContainer role="tabList">
+    <TabBarContainer role="tablist">
       {tabs.map((tab) => (
         <TabBtn key={tab.id} label={tab.label} to={tab.path}></TabBtn>
       ))}

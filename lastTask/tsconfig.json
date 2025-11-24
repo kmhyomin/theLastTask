@@ -8,6 +8,10 @@
   "compilerOptions": {
     "esModuleInterop": true, //이게 없으면 import React from "react"를 import * as React from "react"로 써야함
     "allowSyntheticDefaultImports": true, //타입스크립트가 기본 import를 허용하도록 도움을 줌
-     "jsx": "react-jsx", //TypeScript 컴파일러가 tsx 파일에서 JSX 구문을 해석하려면 tsconfig.json에서 jsx 옵션이 반드시 설정 되어 있어야한다고 해서 추가함.
+    "jsx": "react-jsx", //TypeScript 컴파일러가 tsx 파일에서 JSX 구문을 해석하려면 tsconfig.json에서 jsx 옵션이 반드시 설정 되어 있어야한다고 해서 추가함.
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2017",
+    "lib": ["DOM", "ES2017"]
   }
 }

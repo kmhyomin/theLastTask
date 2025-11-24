@@ -119,13 +119,14 @@ export const EmotionCard = ({
     return(
         <CardContainer color={emotionColor}>
             <Header>
+              {/* 감정 텍스트 및 그림 */}
                 <EmotionInfo color={emotionColor}>
                     {emotionIcon}
                     <EmotionText>{emotionText}</EmotionText>
                 </EmotionInfo>
                 <DateText>{createAt}</DateText>
             </Header>
-
+            {/* 작성한 일기 내용 */}
             <Content>{diaryContent.replace('[하드코딩]', String(emotionText))}</Content>
 
             <ActionBtns>

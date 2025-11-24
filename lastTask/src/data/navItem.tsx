@@ -1,7 +1,7 @@
 import React from 'react';
-import  DiaryIcon from "../imgs/diary.svg?react"
-import  CommunityIcon from "../imgs/community.svg?react";
-import  MyPageIcon from "../imgs/myPage.svg?react";
+import DiaryIcon from "../assets/imgs/diary.svg";
+import CommunityIcon from "../assets/imgs/community.svg";
+import MyPageIcon from "../assets/imgs/myPage.svg";
 
 export interface NavItemType{
     path : string;
