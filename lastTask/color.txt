@@ -118,4 +118,4 @@ CSS 변수 (globals.css)
 
 검은색 버튼 색깔 : #030213
 
-tab버튼 배경 색깔: #ececf0
+tab버튼 배경 색: #ececf0
