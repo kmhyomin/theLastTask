@@ -1,14 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import { Diary } from './pages/Diary.js';
-import Community from "./route/community";
-import MyPage from "./route/my_page";
-import DiaryReport from "./route/diary-report";
-import PostDetail from "./route/post_Detail";
 import { BottomNavModule } from "./components/mocules/BottomNav";
 import { NAV_ITEMS } from "./data/navItem";
 import styled from "styled-components";
 import DiaryLayout from "./components/organism/DiaryLayout";
 import { DiaryList } from "./pages/DiaryList";
+import { Community } from "./pages/Community";
+import { DiaryReport } from "./pages/Diary-report";
+import { MyPage } from "./pages/My_page";
+import { PostDetail } from "./pages/Post_Detail";
 
 const Container = styled.div`
     width: calc(100vw - 40px);
@@ -32,7 +31,7 @@ function App() {
 
           <Route path="/community" element={<Community />} />
           <Route path="/my_page" element={<MyPage />} />
-          <Route path="/post-Detail" element={<PostDetail />} />
+          <Route path="/post-Detail" element={<PostDetail />} /> 
         </Routes>
         <BottomNavModule items={NAV_ITEMS} />
       </BrowserRouter>
@@ -42,4 +41,6 @@ function App() {
 
 // Route는 최상단에서 같이 관리하고 이동하고 싶을 땐 Link to로 이동한다.
 // 왜냐하면 BrowserRouter는 최상단에 하나만 있어야하고, Route는 BrowserRouter안에서만 작동하기 때문이다.
+
+// 왜!!!! 흰 화면만 나와!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!왜!!!!!!!!!!!!!!!!!!!!!!!!!!
 export default App;
