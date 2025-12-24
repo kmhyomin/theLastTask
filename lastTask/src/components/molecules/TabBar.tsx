@@ -23,6 +23,7 @@ const TabBarContainer = styled.nav`
   width: 100%;
   border-radius: 20px;
   background: #ececf0;
+  margin: 5px;
 `;
 
 export const TabBar = ({ tabs }: TabBarProps) => {

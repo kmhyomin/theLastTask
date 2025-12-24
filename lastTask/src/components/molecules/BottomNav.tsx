@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { NavItemType } from "../../data/navItem";
 import { NavLinkItem } from "../atoms/NavLinkItem";
@@ -13,7 +12,7 @@ const NavContainer = styled.nav`
   width : 100%;
   z-index: 1000;
   height: 83.926px;
-  padding: 0 21.431px 0 21.393px;
+  padding: 0;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;

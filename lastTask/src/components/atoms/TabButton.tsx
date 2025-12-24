@@ -30,8 +30,10 @@ const TabBtnStyle = styled(NavLink)`
 
   /* 여기서부턴 figma css */
   display: flex;
-  width: 177.3px;
+  width: auto;
   height: 29.383px;
+  flex-grow: 1;      /* 남는 공간이 있으면 자녀끼리 나눠서 꽉 채워라 */
+  flex-basis: 0;     /* 시작점을 0으로 잡아서 모든 버튼이 공평하게 너비를 나눠 갖게 함 */
   padding: 4px 8px;
   justify-content: center;
   align-items: center;

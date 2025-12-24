@@ -44,7 +44,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   variant?: ButtonVariant;
   icon?: React.ReactNode;
-  iconPosition?: "left" | "right";
+  iconPosition?: "left" | "right"; // enum 값
 }
 
 interface StyledButtonProps {

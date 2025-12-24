@@ -24,6 +24,8 @@ export const DiaryList = () =>{
         //         diaryContent="동해물과 백수산이 마르고 닳도록 하느님이 보우하사 우리나라 만세"
         //     />            
         // </ListWapper>
-        <h1>안녕하세요오오!</h1>
+        <>
+            <h1>메인화면</h1>
+        </>
     )
 }
