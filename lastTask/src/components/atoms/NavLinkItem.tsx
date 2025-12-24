@@ -5,7 +5,7 @@ import styled from "styled-components";
 interface NavLinkItemProps {
   to: string;
   label: string;
-  icon: React.ReactNode;
+  icon: React.ElementType;
 }
 
 const NavItemStyle = styled(NavLink)`
@@ -38,7 +38,7 @@ const NavItemStyle = styled(NavLink)`
   }
 `;
 
-export const NavLinkItem = ({ to, label, icon }: NavLinkItemProps) => {
+export const NavLinkItem = ({ to, label, icon:Icon }: NavLinkItemProps) => {
   const { pathname } = useLocation();
 
   const diaryIconActivePaths = ['/', '/diary-report'];
@@ -59,7 +59,7 @@ export const NavLinkItem = ({ to, label, icon }: NavLinkItemProps) => {
       end = {to === '/' ? false : true}
       className={isActive() ? 'active' : ''}
       >
-      {icon}
+      <Icon />
       {label}
     </NavItemStyle>
   );

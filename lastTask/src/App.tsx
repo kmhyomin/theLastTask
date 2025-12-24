@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { BottomNavModule } from "./components/mocules/BottomNav";
+import { BottomNavModule } from "./components/molecules/BottomNav";
 import { NAV_ITEMS } from "./data/navItem";
 import styled from "styled-components";
 import DiaryLayout from "./components/organism/DiaryLayout";
@@ -42,5 +42,5 @@ function App() {
 // Route는 최상단에서 같이 관리하고 이동하고 싶을 땐 Link to로 이동한다.
 // 왜냐하면 BrowserRouter는 최상단에 하나만 있어야하고, Route는 BrowserRouter안에서만 작동하기 때문이다.
 
-// 왜!!!! 흰 화면만 나와!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!왜!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 왜!!!! 흰 화면만 나와!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!왜!!!!!!!!!!!!!!!!!!!!!!!!!! 왜 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
 export default App;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { EmotionCard } from "../components/mocules/EmotionCard";
+import { EmotionCard } from "../components/molecules/EmotionCard";
 import { HappyIcon } from "../assets/imgs/EmotionIcons/HappyIcon";
 
 const ListWapper = styled.div`

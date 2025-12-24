@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import { TabBar } from "../components/mocules/TabBar";
+import { TabBar } from "../components/molecules/TabBar";
 import { DIARY_TABS } from "../data/diaryTabs";
 
 
