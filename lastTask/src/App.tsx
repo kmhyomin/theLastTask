@@ -3,11 +3,11 @@ import { BottomNavModule } from "./components/molecules/BottomNav";
 import { NAV_ITEMS } from "./data/navItem";
 import styled from "styled-components";
 import DiaryLayout from "./components/organism/DiaryLayout";
-import { DiaryList } from "./pages/DiaryList";
 import { Community } from "./pages/Community";
 import { DiaryReport } from "./pages/Diary-report";
 import { MyPage } from "./pages/My_page";
 import { PostDetail } from "./pages/Post_Detail";
+import { Diary } from "./pages/Diary";
 
 const Container = styled.div`
     width: calc(100vw - 40px);
@@ -24,7 +24,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DiaryLayout />}>
-            <Route index element={<DiaryList />} />
+            <Route index element={<Diary />} />
             <Route path="diary-report" element={<DiaryReport />} />
           </Route>
           {/* TabBar 때문에 하나로 묶어뒀다 */}
@@ -42,5 +42,4 @@ function App() {
 // Route는 최상단에서 같이 관리하고 이동하고 싶을 땐 Link to로 이동한다.
 // 왜냐하면 BrowserRouter는 최상단에 하나만 있어야하고, Route는 BrowserRouter안에서만 작동하기 때문이다.
 
-// 왜!!!! 흰 화면만 나와!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!왜!!!!!!!!!!!!!!!!!!!!!!!!!! 왜 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
 export default App;

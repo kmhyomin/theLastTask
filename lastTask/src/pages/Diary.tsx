@@ -1,30 +1,98 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { TabBar } from "../components/molecules/TabBar";
-import { DIARY_TABS } from "../data/diaryTabs";
+import { Button } from "../components/atoms/Button";
+import { WriteDirayModal } from "../components/organism/WriteDirayModal";
+import DiaryIcon from "../assets/imgs/diary.svg?react";
+import { FiPlus } from "react-icons/fi";
 
 
-const DiaryPageContainer = styled.div`
+const DiaryPageWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #faf5ff 0%, #fdf2f8 50%, #eff6ff 100%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+`;
+
+const ContentArea = styled.main`
+  flex: 1;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
+  align-items: center;
+`;
+const EmptyStateContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    margin-top: calc(32px + 0px);
 `;
 
-const ContenArea = styled.main`
-  flex-grow: 1; // 남을 공간을 채우도록 함.
-  padding: 20px;
+const IconCard = styled.div`
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    opacity: 0.4;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+
+    svg{
+      width: 70px;
+      height: 70px;
+      color: #717182;
+    }
+`;
+
+const TextGroup = styled.div`
+  text-align: center;
+
+  h3{
+    font-size: 16px;
+    color: #717182;
+  }
+  p{
+    font-size: 14px;
+    color: #717182;
+    line-height: 1.5;
+  }
 `;
 
 
+export const Diary = () => {
+  const [isModalOpen, setisModalOpen] = useState(false);
 
-export const Diary = () =>{
-  return(
-    <DiaryPageContainer>
-      <ContenArea>
-        <Outlet />
-      </ContenArea>
-    </DiaryPageContainer>
-  )
+    return (
+      <DiaryPageWrapper>
+        <ContentArea>
+          <EmptyStateContainer>
+            <IconCard>
+              <DiaryIcon />
+            </IconCard>
+            <TextGroup>
+              <h3>아직 작성된 일기가 없습니다.</h3>
+              <p>첫 번째 일기를 작성해보세요!</p>
+            </TextGroup>
+          </EmptyStateContainer>
+          <Button 
+            variant="default"
+            onClick={() => console.log("버튼이 눌려졌어용!")}
+            iconPosition="left"
+            >
+              <FiPlus />
+              일기 쓰기
+            </Button>
+        </ContentArea>
+        <WriteDirayModal
+          isOpen={isModalOpen}
+          onClose={() => setisModalOpen(false)}
+        />
+      </DiaryPageWrapper>
+    );
 };

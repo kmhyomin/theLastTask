@@ -1,19 +1,24 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import type { ButtonVariant } from '../../types/components.ts';
 
-const DefulatBtn = styled.div`
+const DefulatBtn = css`
   width: 100px;
-  height: 30px;
+  height: 35px;
   color: #fff;
+  border-radius: 8px;
+  line-height: 35px;
 `;
-const LongBtn = styled.div`
+const LongBtn = css`
   width: 100%;
-  height: 30px;
+  height: auto;
+  min-height: 48px;
+  border-radius: 8px;
+  line-height: auto;
 `;
-const CircleBtn = styled.div`
-  width: 100px;
-  height: 100px;
+const CircleBtn = css`
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 `;
 
@@ -22,9 +27,10 @@ const StyledBtn = styled.button<StyledButtonProps>`
   height: 30px;
   color: #fff;
   background-color: #000;
-  display: flex;
-  text-align: center;
   line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   ${({ $variant }) => {
     switch ($variant) {
@@ -55,19 +61,15 @@ export const Button = ({
     children,
     variant = "default",
     icon,
-    iconPosition = "left"
+    iconPosition = "left",
+    ...props
 }: ButtonProps) => {
     const hasIcon = !!icon;
-    const content =(
-        <>
-            {hasIcon && iconPosition === "left" && icon}
-            {children}
-            {hasIcon && iconPosition === "right" && icon}
-        </>
-    );
   return(
-    <StyledBtn $variant={variant}>
-        {content}
+    <StyledBtn $variant={variant} {...props}>
+        {hasIcon && iconPosition === "left" && icon}
+          {children}
+        {hasIcon && iconPosition === "right" && icon}
     </StyledBtn>
   );
 };

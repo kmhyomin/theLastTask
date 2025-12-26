@@ -10,7 +10,7 @@ interface EmotionProps{
     onClick : () => void;
 }
 
-const EmotionItemContainer = styled.div<{$bgColor : string; $isSelected : string; $color : string;}>`
+const EmotionItemContainer = styled.div<{$bgColor : string; $isSelected : boolean; $color : string;}>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@ const EmotionItemContainer = styled.div<{$bgColor : string; $isSelected : string
     padding: 16px 10px;
     background-color: ${(props) => props.$bgColor};
     border-radius: 10px;
-    border: 1px solid ${(props) => (props.$isSelected ? "#9810fa" : "transparent")};
+    border: 1px solid ${(props) => (props.$isSelected ? props.$color : "transparent")};
     // 이건 나중에 감정별 색깔로 바뀌는걸로 바꾸기
     transition: all 0.2s ease;
     cursor: pointer;
