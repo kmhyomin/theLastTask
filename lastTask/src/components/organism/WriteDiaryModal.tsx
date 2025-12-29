@@ -17,7 +17,7 @@ const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 9999;
 `;
 
 const ModalContent = styled.div`
@@ -65,10 +65,11 @@ interface WriteDirayModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-export const WriteDirayModal = ({ isOpen, onClose }: WriteDirayModalProps) => {
+export const WriteDiaryModal = ({ isOpen, onClose }: WriteDirayModalProps) => {
   if (!isOpen) return null; //열리지 않았다면 랜더링 X
   return (
     <ModalOverlay onClick={onClose}>
+      <ModalContent onClick={(e) => e.stopPropagation()}>
         <ModalHreader>
           <h2>새 일기 작성</h2>
           <ColseButton onClick={onClose}>
@@ -76,22 +77,31 @@ export const WriteDirayModal = ({ isOpen, onClose }: WriteDirayModalProps) => {
           </ColseButton>
         </ModalHreader>
         <FromSection label="날짜">
-            <CustomDatePicker />
+          <CustomDatePicker />
         </FromSection>
         <FromSection label="오늘의 기분">
-            <EmotionGrid />
+          <EmotionGrid />
         </FromSection>
         <FromSection label="일기 내용">
-            <TextArea 
-                placeholder="오늘 하루는 어땠나요? 자유롭게 작성해보세요..."
-                $height="120px"
-                $bgColor="#F3F3F5"
-            />
+          <TextArea
+            placeholder="오늘 하루는 어땠나요? 자유롭게 작성해보세요..."
+            $height="120px"
+            $bgColor="#F3F3F5"
+          />
         </FromSection>
         <ButtonGroup>
-            <Button color="#333" variant = "long" onClick={() => alert("일기가 제출되었어요!")}>제출</Button>
-            <Button variant = "long" onClick={onClose}>취소</Button>
+          <Button
+            color="#333"
+            variant="long"
+            onClick={() => alert("일기가 제출되었어요!")}
+          >
+            제출
+          </Button>
+          <Button variant="long" onClick={onClose}>
+            취소
+          </Button>
         </ButtonGroup>
+      </ModalContent>
     </ModalOverlay>
   );
 };

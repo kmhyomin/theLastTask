@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../components/atoms/Button";
-import { WriteDirayModal } from "../components/organism/WriteDirayModal";
 import DiaryIcon from "../assets/imgs/diary.svg?react";
 import { FiPlus } from "react-icons/fi";
+import { WriteDiaryModal } from "../components/organism/WriteDiaryModal";
 
 
 const DiaryPageWrapper = styled.div`
@@ -82,16 +82,16 @@ export const Diary = () => {
           </EmptyStateContainer>
           <Button 
             variant="default"
-            onClick={() => console.log("버튼이 눌려졌어용!")}
+            onClick={() => {setisModalOpen(true)}}
             iconPosition="left"
             >
               <FiPlus />
               일기 쓰기
             </Button>
         </ContentArea>
-        <WriteDirayModal
+        <WriteDiaryModal
           isOpen={isModalOpen}
-          onClose={() => setisModalOpen(false)}
+          onClose={() => {setisModalOpen(false)}}
         />
       </DiaryPageWrapper>
     );
