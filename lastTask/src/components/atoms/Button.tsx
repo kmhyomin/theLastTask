@@ -66,7 +66,7 @@ export const Button = ({
 }: ButtonProps) => {
     const hasIcon = !!icon;
   return(
-    <StyledBtn $variant={variant} {...props}>
+    <StyledBtn $variant={variant} {...props} >
         {hasIcon && iconPosition === "left" && icon}
           {children}
         {hasIcon && iconPosition === "right" && icon}

@@ -93,7 +93,7 @@ export const WriteDiaryModal = ({ isOpen, onClose }: WriteDirayModalProps) => {
           <Button
             color="#333"
             variant="long"
-            onClick={() => alert("일기가 제출되었어요!")}
+            onClick={() => {alert("일기가 제출되었어요!")}}
           >
             제출
           </Button>
@@ -105,3 +105,4 @@ export const WriteDiaryModal = ({ isOpen, onClose }: WriteDirayModalProps) => {
     </ModalOverlay>
   );
 };
+
