@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { FromSection } from "../molecules/FromSection";
 import { IoMdClose } from "react-icons/io";
-import { Input } from "../atoms/Input";
 import { EmotionGrid } from "../molecules/EmotionGrid";
 import { TextArea } from "../atoms/TextArea";
 import { Button } from "../atoms/Button";
@@ -17,7 +16,7 @@ const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index:99999999999999;
 `;
 
 const ModalContent = styled.div`
@@ -46,7 +45,7 @@ const ModalHreader = styled.div`
   }
 `;
 
-const ColseButton = styled.button`
+const CloseButton  = styled.button`
   position: absolute;
   right: 0%;
   background: none;
@@ -60,21 +59,27 @@ const ButtonGroup = styled.div`
   gap: 12px;
   margin-top: 10px;
 `;
+const CloseBtn = styled.button``;
 
-interface WriteDirayModalProps {
+interface WriteDiaryModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-export const WriteDiaryModal = ({ isOpen, onClose }: WriteDirayModalProps) => {
+export const WriteDiaryModal = ({ isOpen, onClose }: WriteDiaryModalProps) => {
   if (!isOpen) return null; //열리지 않았다면 랜더링 X
+  const handleOverlayClick = (e : React.MouseEvent) =>{
+    if(e.target === e.currentTarget){
+      onClose();
+    }
+  }
   return (
-    <ModalOverlay onClick={onClose}>
+    <ModalOverlay onClick={handleOverlayClick}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <ModalHreader>
           <h2>새 일기 작성</h2>
-          <ColseButton onClick={onClose}>
-            <IoMdClose />
-          </ColseButton>
+          <CloseButton  onClick={onClose}>
+            <IoMdClose /> {/* 그냥 아이콘 */}
+          </CloseButton>
         </ModalHreader>
         <FromSection label="날짜">
           <CustomDatePicker />
@@ -97,12 +102,11 @@ export const WriteDiaryModal = ({ isOpen, onClose }: WriteDirayModalProps) => {
           >
             제출
           </Button>
-          <Button variant="long" onClick={onClose}>
+          <CloseBtn onClick={onClose}>
             취소
-          </Button>
+          </CloseBtn>
         </ButtonGroup>
       </ModalContent>
     </ModalOverlay>
   );
 };
-

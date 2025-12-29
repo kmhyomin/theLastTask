@@ -82,7 +82,11 @@ export const Diary = () => {
           </EmptyStateContainer>
           <Button 
             variant="default"
-            onClick={() => {setisModalOpen(true)}}
+            onClick={() => {
+              setisModalOpen(true)
+              console.log("일기팝업 뿅!")
+            }}
+            
             iconPosition="left"
             >
               <FiPlus />
