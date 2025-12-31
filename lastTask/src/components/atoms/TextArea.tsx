@@ -4,6 +4,7 @@ import styled from "styled-components";
 interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement>{
     $height?: string; // 댓글쓰는거랑 일기 쓰는거랑 달라서 넣었다
     $bgColor? : string; // 이하동문
+    placeholder? : string;
 }
 
 
@@ -15,6 +16,7 @@ const TextAreaStyle = styled.textarea<TextAreaProps>`
     border-radius: 8px;
     border: none;
     resize: none;
+    outline-color: #717182;
     font-size: 16px;
 
     &::placeholder{
@@ -23,9 +25,5 @@ const TextAreaStyle = styled.textarea<TextAreaProps>`
 `;
 
 export const TextArea = (props : TextAreaProps) => {
-    return(
-        <>
-            <TextArea {...props} />
-        </>
-    )
+    return <TextAreaStyle {...props} />
 }

@@ -23,6 +23,8 @@ const EmotionItemContainer = styled.div<{$bgColor : string; $isSelected : boolea
     transition: all 0.2s ease;
     cursor: pointer;
 
+    height: 60px;
+
     span{
         font-size: 14px;
         color : ${(props) => props.$color};

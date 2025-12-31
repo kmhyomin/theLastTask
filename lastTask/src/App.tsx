@@ -1,8 +1,8 @@
+import styled from "styled-components";
+import DiaryLayout from "./components/organism/DiaryLayout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { BottomNavModule } from "./components/molecules/BottomNav";
 import { NAV_ITEMS } from "./data/navItem";
-import styled from "styled-components";
-import DiaryLayout from "./components/organism/DiaryLayout";
 import { Community } from "./pages/Community";
 import { DiaryReport } from "./pages/Diary-report";
 import { MyPage } from "./pages/My_page";

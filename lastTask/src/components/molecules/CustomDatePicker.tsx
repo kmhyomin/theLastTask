@@ -5,16 +5,22 @@ import { Input } from "../atoms/Input";
 import { IoCalendarNumberOutline } from "react-icons/io5";
 
 const DatePickerWrapper = styled.div`
-    width: 100%;
+    width: 90%;
+    height: 70%;
+    max-width: 400px;
+    max-height: 400px;
     position: relative;
+    background-color: #fff;
 
     .react-datepicker {
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-            sans-serif;
+        all: unset;
+
+        background-color: #fff;
+        width: 90%;
+        height: 70%;
+        max-width: 400px;
+        max-height: 400px;
+        overflow: hidden;
     }
     .react-datepicker__header {
         background-color: #fff;

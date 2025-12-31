@@ -10,13 +10,15 @@ const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5) !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index:99999999999999;
+  z-index:9999;
 `;
 
 const ModalContent = styled.div`
@@ -51,6 +53,7 @@ const CloseButton  = styled.button`
   background: none;
   font-size: 20px;
   cursor: pointer;
+  border: none;
 `;
 
 const ButtonGroup = styled.div`
@@ -59,7 +62,6 @@ const ButtonGroup = styled.div`
   gap: 12px;
   margin-top: 10px;
 `;
-const CloseBtn = styled.button``;
 
 interface WriteDiaryModalProps {
   isOpen: boolean;
@@ -98,13 +100,16 @@ export const WriteDiaryModal = ({ isOpen, onClose }: WriteDiaryModalProps) => {
           <Button
             color="#333"
             variant="long"
-            onClick={() => {alert("일기가 제출되었어요!")}}
+            onClick={() => {
+              console.log("일기가 제출되었어요!")
+              
+            }}
           >
             제출
           </Button>
-          <CloseBtn onClick={onClose}>
+          <Button variant="long" onClick={onClose}>
             취소
-          </CloseBtn>
+          </Button>
         </ButtonGroup>
       </ModalContent>
     </ModalOverlay>

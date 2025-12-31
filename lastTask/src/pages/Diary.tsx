@@ -67,7 +67,8 @@ const TextGroup = styled.div`
 
 export const Diary = () => {
   const [isModalOpen, setisModalOpen] = useState(false);
-
+  console.log("현재 모달 상태는...." , isModalOpen);
+  
     return (
       <DiaryPageWrapper>
         <ContentArea>
@@ -93,10 +94,12 @@ export const Diary = () => {
               일기 쓰기
             </Button>
         </ContentArea>
-        <WriteDiaryModal
-          isOpen={isModalOpen}
-          onClose={() => {setisModalOpen(false)}}
-        />
+        {isModalOpen &&(
+          <WriteDiaryModal
+            isOpen={isModalOpen}
+            onClose={() => {setisModalOpen(false)}}
+          />
+        )}
       </DiaryPageWrapper>
     );
 };

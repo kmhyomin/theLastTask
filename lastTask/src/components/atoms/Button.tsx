@@ -11,7 +11,7 @@ const DefulatBtn = css`
 `;
 const LongBtn = css`
   width: 100%;
-  height: auto;
+  height: 36px;
   min-height: 48px;
   border-radius: 8px;
   line-height: auto;

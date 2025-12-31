@@ -25,7 +25,8 @@ export const EmotionGrid = () => {
                             bgColor={em.bgColor}
                             color={em.color}
                             isSelected={selectedId === em.id}
-                            onClick={() => setSelectedId(em.id)}                        />
+                            onClick={() => setSelectedId(em.id)}
+                        /> // EmotionItem
                     )
                 })}
             </GridContainer>
